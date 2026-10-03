@@ -1,11 +1,12 @@
 import { Request,Response,NextFunction } from "express";
 
 export interface AuthRequest extends Request{
-  user?:any;
+  user?:IUser;
 }
 
 import jwt from 'jsonwebtoken';
 import User from '../model/User';
+import { IUser } from "../model/User";
 
 const protect = async (req:AuthRequest, res:Response, next:NextFunction) => {
   let token;

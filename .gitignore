@@ -1,3 +1,4 @@
 node_modules/
 .env
 DS_Store
+typescript_conversion_guide.md
